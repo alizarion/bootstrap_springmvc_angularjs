@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="monApp2">
+<head>
+    <title></title>
+</head>
+<body >
+<h1>TEST OK32</h1>
+
+
+<div ng-controller="SimpleCtrl">
+    name: <input type="text" ng-model="name"/> {{name}}
+    <br/>
+    <ul>
+        <li ng-repeat="username in names | filter:name | orderBy:username.prenom:username.nom">
+            {{ username.prenom }}  {{ username.nom }}
+        </li>
+    </ul>
+    {{1288323623006 | date:'yyyy-MM-dd'}}
+</div>
+
+
+<script type="text/javascript" src="js/lib/angular.min.js"></script>
+
+<script type="text/javascript" src="js/app/application.js"></script>
+<script type="text/javascript" src="js/app/controllers.js"></script>
+</body>
+</html>
